@@ -1,0 +1,6 @@
+fr\epita\iamtesting\test\TestToString.class
+fr\epita\iamtesting\test\TestDataSource.class
+fr\epita\iamtesting\test\TestSpring.class
+fr\epita\iamtesting\test\TestLog4jIntegration.class
+fr\epita\iamtesting\test\TestDatabaseConnection.class
+fr\epita\iamtesting\test\TestJUnitForMarven.class

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+	<bean id="hello" class="java.lang.String">
+		<constructor-arg value="Hello!" />
+	</bean>
+    
+    <bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+		<property name="driverClassName" value="org.apache.derby.jdbc.ClientDriver" />
+		<property name="url" value="jdbc:derby://localhost:1527/sample;create=true" />
+		<property name="username" value="iamcore" />
+		<property name="password" value="123" />
+	</bean>
+		
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="fr.epita.iamtesting.datamodel" />
+		<property name="hibernateProperties">
+		    <props>
+			<prop key="hibernate.dialect">org.hibernate.dialect.DerbyTenSevenDialect</prop>
+			<prop key="hibernate.format_sql">true</prop>
+			<prop key="hibernate.show_sql">true</prop>
+			<prop key="hibernate.hbm2ddl.auto">create</prop>
+		    </props>
+		</property>
+	</bean>
+	
+	<bean id="hibernateDAO" class="fr.epita.iamtesting.services.HibernateDAO">
+	</bean>
+	<bean id="jdbcDAO" class="fr.epita.iamtesting.services.JDBCIdentityDAO">
+	</bean>
+	
+</beans>

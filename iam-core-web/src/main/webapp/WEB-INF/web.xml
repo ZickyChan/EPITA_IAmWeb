@@ -1,0 +1,61 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/applicationContext.xml</param-value>
+    </context-param>
+  	
+  	<listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+  <servlet>
+  	<servlet-name>Authenticate</servlet-name>
+  	<display-name>Authenticate</display-name>
+  	<description></description>
+  	<servlet-class>fr.epita.iamweb.Authenticate</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>CreateIdentity</servlet-name>
+  	<display-name>CreateIdentity</display-name>
+  	<description></description>
+  	<servlet-class>fr.epita.iamweb.CreateIdentity</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SearchingIdentity</servlet-name>
+  	<display-name>SearchingIdentity</display-name>
+  	<description></description>
+  	<servlet-class>fr.epita.iamweb.SearchingIdentity</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ModifyIdentity</servlet-name>
+  	<display-name>ModifyIdentity</display-name>
+  	<description></description>
+  	<servlet-class>fr.epita.iamweb.ModifyIdentity</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Authenticate</servlet-name>
+  	<url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>CreateIdentity</servlet-name>
+  	<url-pattern>/CreateIdentity</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchingIdentity</servlet-name>
+  	<url-pattern>/SearchingIdentity</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ModifyIdentity</servlet-name>
+  	<url-pattern>/ModifyIdentity</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fr.epita.iamcoreweb</groupId>
+  <artifactId>iam-core-web</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>iam-core-web Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+  	<junit.version>3.8.1</junit.version>
+  	<servlet.version>3.1.0</servlet.version>	
+	<log4j2.version>2.9.0</log4j2.version>
+	<javax-inject.version>1</javax-inject.version>
+	<derby.version>10.13.1.1</derby.version>
+	<spring.version>4.3.10.RELEASE</spring.version>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>${servlet.version}</version>
+	    <scope>provided</scope>
+	</dependency>
+	<dependency>
+		   <groupId>org.apache.logging.log4j</groupId>
+		   <artifactId>log4j-core</artifactId>
+		   <version>${log4j2.version}</version>
+		 </dependency>	
+	<dependency>
+		   <groupId>org.apache.logging.log4j</groupId>
+		   <artifactId>log4j-api</artifactId>
+		   <version>${log4j2.version}</version>
+		 </dependency>
+   
+		 <dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-context</artifactId>
+	        <version>${spring.version}</version>
+	     </dependency>
+		 
+		 <dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-core</artifactId>
+	        <version>${spring.version}</version>
+	     </dependency>
+		 
+		 <dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-test</artifactId>
+	        <version>${spring.version}</version>
+	     </dependency>
+		 
+		 <dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-web</artifactId>
+	        <version>${spring.version}</version>
+	     </dependency>
+		 
+		 <dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-jdbc</artifactId>
+	        <version>${spring.version}</version>
+	     </dependency>
+	     
+	     <dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-orm</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.derby</groupId>
+		    <artifactId>derbyclient</artifactId>
+		    <version>${derby.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.inject</groupId>
+		    <artifactId>javax.inject</artifactId>
+		    <version>${javax-inject.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>fr.epita.iam</groupId>
+	  		<artifactId>iam-testing</artifactId>
+	  		<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+   </dependencies>
+   
+  <build>
+    <finalName>iam-core-web</finalName>
+  </build>
+</project>
